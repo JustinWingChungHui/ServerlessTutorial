@@ -66,11 +66,11 @@ functions:
     handler: list.main
     events:
       - http:
-        path: notes
-        method: get
-        cors: true
-        authorizer:
-          arn: arn:aws:cognito-idp:eu-west-2:525484755752:userpool/eu-west-2_irLEqyGRN
+          path: notes
+          method: get
+          cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:eu-west-2:525484755752:userpool/eu-west-2_irLEqyGRN
 
   update:
     # Defines an HTTP API endpoint that calls the main function in update.js
@@ -79,11 +79,11 @@ functions:
     handler: update.main
     events:
       - http:
-        path: notes/{id}
-        method: put
-        cors: true
-        authorizer:
-          arn: arn:aws:cognito-idp:eu-west-2:525484755752:userpool/eu-west-2_irLEqyGRN
+          path: notes/{id}
+          method: put
+          cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:eu-west-2:525484755752:userpool/eu-west-2_irLEqyGRN
 
   delete:
     # Defines an HTTP API endpoint that calls the main function in delete.js
@@ -92,9 +92,8 @@ functions:
     handler: delete.main
     events:
       - http:
-        path: notes/{id}
-        method: delete
-        cors: true
-        authorizer:
-          arn: arn:aws:cognito-idp:eu-west-2:525484755752:userpool/eu-west-2_irLEqyGRN
-          
+          path: notes/{id}
+          method: delete
+          cors: true
+          authorizer:
+            arn: arn:aws:cognito-idp:eu-west-2:525484755752:userpool/eu-west-2_irLEqyGRN
